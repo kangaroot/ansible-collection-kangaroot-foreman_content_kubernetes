@@ -1,0 +1,43 @@
+---
+# noqa: var-naming[no-role-prefix]
+
+foreman_content_credentials_kubernetes126:
+  - name: "{{ foreman_cred_name_prefix | default('') }}RPM-GPG-KEY-kubernetes-1.26"
+    content_type: gpg_key
+    content: "{{ lookup('ansible.builtin.url', foreman_repo_baseurl_kubernetes ~ '/core:/stable:/v1.26/rpm/repodata/repomd.xml.key', split_lines=False, validate_certs=False) }}"
+    # content: "{{ lookup('ansible.builtin.file', role_path ~ '/files/repomd.xml.key-1.26') }}"
+
+foreman_products_defaults: &foreman_products_defaults
+  content_type: yum
+  gpg_key: "{{ foreman_cred_name_prefix | default('') }}RPM-GPG-KEY-kubernetes-1.26"
+  download_policy: "{{ foreman_products_defaults_download_policy_kubernetes126 }}"
+  # mirror_on_sync: True
+  # mirroring_policy: "additive"
+  # mirroring_policy: "mirror_content_only"
+  # mirroring_policy: "mirror_complete"
+  mirroring_policy: "{{ foreman_products_defaults_mirroring_policy_kubernetes126 }}"
+  verify_ssl_on_sync: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes126 | bool }}"
+  # http_proxy: Default Proxy
+  http_proxy_policy: "{{ foreman_products_defaults_http_proxy_policy_kubernetes126 }}"
+  unprotected: "{{ foreman_products_defaults_unprotected_kubernetes126 | bool }}"
+
+
+foreman_products_kubernetes_kubernetes126:
+  - name: "{{ foreman_product_name_prefix | default('') }}Kubernetes"
+    label: "{{ foreman_product_label_prefix | default('') }}Kubernetes"
+    organization: "{{ foreman_organization_kubernetes126 }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Kubernetes - 1.26 - EL"
+        label: "{{ foreman_repo_label_prefix | default('') }}kubernetes-1_26-el"
+        url: "{{ foreman_repo_baseurl_kubernetes }}/core:/stable:/v1.26/rpm/"
+        <<: *foreman_products_defaults
+        organization: "{{ foreman_organization_kubernetes126 }}"
+
+foreman_content_views_kubernetes126:
+  - name: "{{ foreman_cv_prefix | default('cv_') }}{{ foreman_cv_name_prefix | default('') }}kubernetes_1_26_el"
+    organization: "{{ foreman_organization_kubernetes126 }}"
+    repositories:
+      - name: "{{ foreman_repo_name_prefix | default('') }}Kubernetes - 1.26 - EL"
+        product: "{{ foreman_product_name_prefix | default('') }}Kubernetes"
+    allow_promote: "{{ foreman_cv_allow_promote_kubernetes126 }}"
+

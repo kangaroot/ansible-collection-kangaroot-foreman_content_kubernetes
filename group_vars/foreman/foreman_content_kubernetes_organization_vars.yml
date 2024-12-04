@@ -8,4 +8,11 @@
 
 # foreman_organization_kubernetes: "{{ foreman_organization }}"
 
-# foreman_organization_kubernetes_el7: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes124: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes125: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes126: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes127: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes128: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes129: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes130: "{{ foreman_organization_kubernetes }}"
+# foreman_organization_kubernetes131: "{{ foreman_organization_kubernetes }}"

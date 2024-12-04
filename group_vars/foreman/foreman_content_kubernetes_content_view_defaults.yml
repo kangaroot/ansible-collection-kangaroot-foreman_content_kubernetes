@@ -12,4 +12,11 @@
 
 # foreman_cv_allow_promote_kubernetes: "{{ foreman_cv_allow_promote | bool }}"
 
-# foreman_cv_allow_promote_kubernetes_el7: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+# foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"

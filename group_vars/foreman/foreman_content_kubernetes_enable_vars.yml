@@ -8,4 +8,11 @@
 
 # foreman_enable_kubernetes: false
 
-# foreman_enable_kubernetes_el7: "{{ foreman_enable_kubernetes | bool }}"
+# foreman_enable_kubernetes124: false
+# foreman_enable_kubernetes125: false
+# foreman_enable_kubernetes126: false
+# foreman_enable_kubernetes127: false
+# foreman_enable_kubernetes128: false
+# foreman_enable_kubernetes129: false
+# foreman_enable_kubernetes130: false
+# foreman_enable_kubernetes131: "{{ foreman_enable_kubernetes | bool }}"

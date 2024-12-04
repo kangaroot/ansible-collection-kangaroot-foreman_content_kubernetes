@@ -8,7 +8,7 @@
 
 ### KUBERNETES
 
-foreman_repo_baseurl_kubernetes: https://packages.cloud.google.com/yum
+foreman_repo_baseurl_kubernetes: https://pkgs.k8s.io
 
 
 #######################################
@@ -19,7 +19,14 @@ foreman_repo_baseurl_kubernetes: https://packages.cloud.google.com/yum
 
 foreman_enable_kubernetes: false
 
-foreman_enable_kubernetes_el7: "{{ foreman_enable_kubernetes | bool }}"
+foreman_enable_kubernetes124: false
+foreman_enable_kubernetes125: false
+foreman_enable_kubernetes126: false
+foreman_enable_kubernetes127: false
+foreman_enable_kubernetes128: false
+foreman_enable_kubernetes129: false
+foreman_enable_kubernetes130: false
+foreman_enable_kubernetes131: "{{ foreman_enable_kubernetes | bool }}"
 
 
 #######################################
@@ -34,6 +41,54 @@ foreman_products_defaults_verify_ssl_on_sync_kubernetes: "{{ foreman_products_de
 foreman_products_defaults_http_proxy_policy_kubernetes: "{{ foreman_products_defaults_http_proxy_policy }}"
 foreman_products_defaults_unprotected_kubernetes: "{{ foreman_products_defaults_unprotected | bool }}"
 
+foreman_products_defaults_download_policy_kubernetes124: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes124: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes124: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes124: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes124: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes125: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes125: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes125: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes125: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes125: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes126: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes126: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes126: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes126: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes126: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes127: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes127: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes127: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes127: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes127: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes128: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes128: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes128: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes128: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes128: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes129: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes129: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes129: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes129: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes129: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes130: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes130: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes130: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes130: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes130: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
+foreman_products_defaults_download_policy_kubernetes131: "{{ foreman_products_defaults_download_policy_kubernetes }}"
+foreman_products_defaults_mirroring_policy_kubernetes131: "{{ foreman_products_defaults_mirroring_policy_kubernetes }}"
+foreman_products_defaults_verify_ssl_on_sync_kubernetes131: "{{ foreman_products_defaults_verify_ssl_on_sync_kubernetes | bool }}"
+foreman_products_defaults_http_proxy_policy_kubernetes131: "{{ foreman_products_defaults_http_proxy_policy_kubernetes }}"
+foreman_products_defaults_unprotected_kubernetes131: "{{ foreman_products_defaults_unprotected_kubernetes | bool }}"
+
 
 #######################################
 ### ORGANIZATION VARS
@@ -43,7 +98,14 @@ foreman_products_defaults_unprotected_kubernetes: "{{ foreman_products_defaults_
 
 foreman_organization_kubernetes: "{{ foreman_organization }}"
 
-foreman_organization_kubernetes_el7: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes124: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes125: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes126: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes127: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes128: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes129: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes130: "{{ foreman_organization_kubernetes }}"
+foreman_organization_kubernetes131: "{{ foreman_organization_kubernetes }}"
 
 
 #######################################
@@ -54,57 +116,104 @@ foreman_organization_kubernetes_el7: "{{ foreman_organization_kubernetes }}"
 
 foreman_cv_allow_promote_kubernetes: "{{ foreman_cv_allow_promote | bool }}"
 
-foreman_cv_allow_promote_kubernetes_el7: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
+foreman_cv_allow_promote_kubernetes124: "{{ foreman_cv_allow_promote_kubernetes | bool }}"
 
 
 #######################################
 ### CONTENT
 #######################################
 
-foreman_content_credentials_kubernetes_main:
-  - name: "{{ foreman_cred_name_prefix | default('') }}RPM-GPG-KEY-kubernetes-pkg"
-    content_type: gpg_key
-    content: "{{ lookup('ansible.builtin.url', foreman_repo_baseurl_kubernetes ~ '/doc/rpm-package-key.gpg', split_lines=False, validate_certs=False) }}"
-    # content: "{{ lookup('ansible.builtin.file', role_path ~ '/files/RPM-GPG-KEY-kubernetes-pkg') }}"
-  - name: "{{ foreman_cred_name_prefix | default('') }}RPM-GPG-KEY-kubernetes-yum"
-    content_type: gpg_key
-    content: "{{ lookup('ansible.builtin.url', foreman_repo_baseurl_kubernetes ~ '/doc/yum-key.gpg', split_lines=False, validate_certs=False) }}"
-    # content: "{{ lookup('ansible.builtin.file', role_path ~ '/files/RPM-GPG-KEY-kubernetes-yum') }}"
-
+foreman_content_credentials_kubernetes_main: []
 foreman_content_credentials_kubernetes: "{{ ( foreman_content_credentials_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_content_credentials_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_content_credentials_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_content_credentials_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_products_kubernetes_main: []
 foreman_products_kubernetes: "{{ ( foreman_products_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_products_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_products_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_products_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_products_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_products_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_products_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_products_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_products_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_products_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_content_views_kubernetes_main: []
 foreman_content_views_kubernetes: "{{ ( foreman_content_views_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_content_views_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_content_views_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_content_views_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_content_views_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_content_views_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_content_views_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_content_views_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_content_views_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_content_views_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_operatingsystems_kubernetes_main: []
 foreman_operatingsystems_kubernetes: "{{ ( foreman_operatingsystems_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_operatingsystems_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_operatingsystems_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_operatingsystems_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_installation_media_kubernetes_main: []
 foreman_installation_media_kubernetes: "{{ ( foreman_installation_media_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_installation_media_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_installation_media_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_installation_media_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_installation_media_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_installation_media_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_installation_media_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_installation_media_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_installation_media_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_installation_media_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_activation_keys_kubernetes_main: []
 foreman_activation_keys_kubernetes: "{{ ( foreman_activation_keys_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_activation_keys_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_activation_keys_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_activation_keys_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 foreman_sync_plan_products_kubernetes_main:
   - "{{ foreman_product_name_prefix | default('') }}Kubernetes"
 
 foreman_sync_plan_products_kubernetes: "{{ ( foreman_sync_plan_products_kubernetes_main | default([]) if foreman_enable_kubernetes | bool else [] ) |
-  union( foreman_sync_plan_products_kubernetes_el7 | default([]) if foreman_enable_kubernetes_el7 | bool else [] )
+  union( foreman_sync_plan_products_kubernetes124 | default([]) if foreman_enable_kubernetes124 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes125 | default([]) if foreman_enable_kubernetes125 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes126 | default([]) if foreman_enable_kubernetes126 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes127 | default([]) if foreman_enable_kubernetes127 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes128 | default([]) if foreman_enable_kubernetes128 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes129 | default([]) if foreman_enable_kubernetes129 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes130 | default([]) if foreman_enable_kubernetes130 | bool else [] ) |
+  union( foreman_sync_plan_products_kubernetes131 | default([]) if foreman_enable_kubernetes131 | bool else [] )
   }}"
 
 
